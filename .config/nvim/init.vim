@@ -15,7 +15,8 @@ call plug#begin()
 
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/tpope/vim-surround'
@@ -38,7 +39,14 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-autocmd vimenter * ++nested colorscheme gruvbox
+" autocmd vimenter * ++nested colorscheme gruvbox
+
+" vim-airline theme
+let g:airline_theme='ayu_dark'
+
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
 
 " NERDTree
 nnoremap <leader>n :NERDTreeFocus<CR>
