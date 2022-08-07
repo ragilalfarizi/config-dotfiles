@@ -1,0 +1,1 @@
+/home/ragil/.fzf/shell/key-bindings.fish
