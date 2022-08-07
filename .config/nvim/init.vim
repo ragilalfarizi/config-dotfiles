@@ -7,6 +7,7 @@ set smarttab
 set softtabstop=4
 set mouse=a
 source $HOME/.config/nvim/plug-config/coc.vim
+set hidden
 
 :imap jk <Esc>
 :vmap jk <Esc>
@@ -30,6 +31,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 Plug 'https://github.com/preservim/tagbar'
 Plug 'https://github.com/honza/vim-snippets'
 Plug 'puremourning/vimspector'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 call plug#end()
 
@@ -61,3 +64,9 @@ nmap <leader>t :TagbarToggle<CR>
 " Vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
 " packadd! vimspector
+
+" FZF
+nnoremap <silent> <C-f> :Files<CR>
+" Ripgrep
+nnoremap <silent> <Leader>f :Rg<CR>
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
