@@ -8,6 +8,7 @@ set softtabstop=4
 set mouse=a
 source $HOME/.config/nvim/plug-config/coc.vim
 set hidden
+set encoding=UTF-8
 
 :imap jk <Esc>
 :vmap jk <Esc>
@@ -33,6 +34,7 @@ Plug 'https://github.com/honza/vim-snippets'
 Plug 'puremourning/vimspector'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
